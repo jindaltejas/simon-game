@@ -20,8 +20,9 @@ function nextSequence() {
   var randomChosenColour = buttonColours[randomNumber];
   gamePattern.push(randomChosenColour);
   // console.log(gamePattern);
-  $("#" + randomChosenColour).fadeOut(100).fadeIn(100);
-  playSound(randomChosenColour);
+  $("#" + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
+
+  setTimeout(playSound(randomChosenColour), 1000);
 }
 
 $("div .btn").click(function() {
